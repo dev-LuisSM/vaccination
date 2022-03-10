@@ -31,6 +31,8 @@ body {
         width: 100%;
         top: 0;
 
+        z-index: 9;
+
         nav {
             display: flex;
             justify-content: space-between;
@@ -57,6 +59,7 @@ body {
         }
     }
 
+    // Landing section
     .landing {
         width: 100%;
         height: 100vh;
@@ -135,7 +138,7 @@ body {
 
             .schedule {
                 position: absolute;
-                bottom: 2rem;
+                bottom: 1rem;
                 height: 15vh;
                 width: 72%;
 
@@ -149,7 +152,7 @@ body {
                 display: flex;
                 align-items: center;
                 .date {
-                    width: 90%;
+                    width: 85%;
                     display: flex;
                     justify-content: space-between;
                     margin: 0 2rem;
@@ -171,19 +174,155 @@ body {
                     }
                 }
                 button {
-                    width: 10%;
+                    width: 15%;
                 }
             }
         }
     }
 
-    .why {
+    // Brands section
+    .brands {
         width: 100%;
-        height: 100vh;
-        background-color: #7f8ba0;
+        padding: 4rem 3rem;
+
+        display: inline-flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        img{
+            width: 17.5%;
+            opacity: 40%;
+        }
     }
 
-    // Elementos comunes
+    // Why vaccine section
+    .why-vaccine{
+        width: 100%;
+        padding: 3rem;
+
+        .cards-benefits{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+
+            max-width: 100%;
+            position: relative;
+            height: auto;
+            min-height: 100% !important;
+
+            padding: 1rem 0.5rem;
+            margin: 3rem 0 0 0;
+            
+            div{
+                padding: 1rem;
+
+                border: 1px solid #FAFAFF;
+                border-radius: 10px;
+
+                height: 100%;
+                width: 20%;
+
+                img{
+                    width: 15%;
+                    margin-bottom: 0.5rem;
+                }
+                p:first-of-type{
+                    margin-bottom: 0.5rem;
+                }
+                p:last-of-type{
+                    font-size: small;
+                }
+
+                &:hover{
+                    // border:none changes the div size
+                    border: 1px solid transparent;
+                    box-shadow: 0px 7px 20px -13px #3757d552;
+                }
+            }
+        }
+    }
+
+    .preparation{
+        width: 100%;
+        
+        display: flex;
+        flex-direction: row;
+
+
+        .information, .girl{
+            width: 50%;
+        }
+
+        .girl{
+            background: linear-gradient(0deg, #2a71de 50%, #0899e6 75%, white 75%);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+        .information{
+            padding: 0 3rem;
+        }
+
+        .collapsable-content{
+            margin: 0rem 3rem 0 2rem;
+            span{
+                display: flex;
+                align-items: center;
+
+                img{
+                    margin: 0 2rem;
+                }
+                .arrow{
+                    margin-left: auto;
+                }
+
+                border: 1px #FAFAFF solid;
+                border-radius: 5px;
+                padding: 0.5rem 0;
+            }
+
+
+            section{
+                margin: 2rem 0;
+            }
+
+            .content{
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-out;
+            }
+
+            div > p{
+                margin: 1rem 3.5rem;
+                font-size: small;
+            }
+
+            // Active styles
+            
+            // Span
+            .active{
+                border: 1px solid transparent;
+            }
+
+            // Section box-shadow
+            .active-section{
+                box-shadow: 0px 7px 20px -13px #3757d552;
+            }
+
+            // icon box-shadow
+            .active-icon{
+                border: 1px white solid;
+                box-shadow: 0px 4px 8px -3px #3757d552;
+            }
+
+        }
+
+        
+    }
+}
+
+    // Common elements
     button {
         padding: 0.75rem 1rem;
         background-color: $azul_button;
@@ -233,7 +372,13 @@ body {
         color: $azul_p_bold;
     }
 
+    .why{
+        font-size: xx-large;
+        font-weight: 800;
+        padding-bottom: 2rem;
+    }
+
     .icon {
         width: 24px;
+        height: 24px;
     }
-}

@@ -19,6 +19,7 @@ body header {
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 9;
 }
 
 body header nav {
@@ -131,7 +132,7 @@ body .landing .texts .icon-clock img {
 
 body .landing .texts .schedule {
   position: absolute;
-  bottom: 2rem;
+  bottom: 1rem;
   height: 15vh;
   width: 72%;
   background: rgba(255, 255, 255, 0.9);
@@ -144,7 +145,7 @@ body .landing .texts .schedule {
 }
 
 body .landing .texts .schedule .date {
-  width: 90%;
+  width: 85%;
   display: flex;
   justify-content: space-between;
   margin: 0 2rem;
@@ -171,16 +172,137 @@ body .landing .texts .schedule .date section span {
 }
 
 body .landing .texts .schedule button {
-  width: 10%;
+  width: 15%;
 }
 
-body .why {
+body .brands {
   width: 100%;
-  height: 100vh;
-  background-color: #7f8ba0;
+  padding: 4rem 3rem;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
-body button {
+body .brands img {
+  width: 17.5%;
+  opacity: 40%;
+}
+
+body .why-vaccine {
+  width: 100%;
+  padding: 3rem;
+}
+
+body .why-vaccine .cards-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  position: relative;
+  height: auto;
+  min-height: 100% !important;
+  padding: 1rem 0.5rem;
+  margin: 3rem 0 0 0;
+}
+
+body .why-vaccine .cards-benefits div {
+  padding: 1rem;
+  border: 1px solid #FAFAFF;
+  border-radius: 10px;
+  height: 100%;
+  width: 20%;
+}
+
+body .why-vaccine .cards-benefits div img {
+  width: 15%;
+  margin-bottom: 0.5rem;
+}
+
+body .why-vaccine .cards-benefits div p:first-of-type {
+  margin-bottom: 0.5rem;
+}
+
+body .why-vaccine .cards-benefits div p:last-of-type {
+  font-size: small;
+}
+
+body .why-vaccine .cards-benefits div:hover {
+  border: 1px solid transparent;
+  box-shadow: 0px 7px 20px -13px #3757d552;
+}
+
+body .preparation {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+body .preparation .information, body .preparation .girl {
+  width: 50%;
+}
+
+body .preparation .girl {
+  background: linear-gradient(0deg, #2a71de 50%, #0899e6 75%, white 75%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+body .preparation .information {
+  padding: 0 3rem;
+}
+
+body .preparation .collapsable-content {
+  margin: 0rem 3rem 0 2rem;
+}
+
+body .preparation .collapsable-content span {
+  display: flex;
+  align-items: center;
+  border: 1px #FAFAFF solid;
+  border-radius: 5px;
+  padding: 0.5rem 0;
+}
+
+body .preparation .collapsable-content span img {
+  margin: 0 2rem;
+}
+
+body .preparation .collapsable-content span .arrow {
+  margin-left: auto;
+}
+
+body .preparation .collapsable-content section {
+  margin: 2rem 0;
+}
+
+body .preparation .collapsable-content .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+body .preparation .collapsable-content div > p {
+  margin: 1rem 3.5rem;
+  font-size: small;
+}
+
+body .preparation .collapsable-content .active {
+  border: 1px solid transparent;
+}
+
+body .preparation .collapsable-content .active-section {
+  box-shadow: 0px 7px 20px -13px #3757d552;
+}
+
+body .preparation .collapsable-content .active-icon {
+  border: 1px white solid;
+  box-shadow: 0px 4px 8px -3px #3757d552;
+}
+
+button {
   padding: 0.75rem 1rem;
   background-color: #3757d5;
   outline: none;
@@ -192,42 +314,49 @@ body button {
   transition: 0.3s;
 }
 
-body button:hover {
+button:hover {
   background-color: #0899e6;
 }
 
-body button:active {
+button:active {
   background-color: white;
   color: #3757d5;
 }
 
-body h1,
-body h2,
-body h3 {
+h1,
+h2,
+h3 {
   color: #1f3e72;
 }
 
-body p {
+p {
   color: #8894a7;
   font-weight: 600;
   line-height: 1.6;
 }
 
-body a {
+a {
   color: #7f8ba0;
   transition: 0.3s;
 }
 
-body a:hover {
+a:hover {
   color: white;
 }
 
-body .p-bold {
+.p-bold {
   font-size: larger;
   color: #274577;
 }
 
-body .icon {
+.why {
+  font-size: xx-large;
+  font-weight: 800;
+  padding-bottom: 2rem;
+}
+
+.icon {
   width: 24px;
+  height: 24px;
 }
 /*# sourceMappingURL=index.css.map */
