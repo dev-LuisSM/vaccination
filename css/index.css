@@ -41,6 +41,10 @@ body header nav ul button {
   font-weight: 600;
 }
 
+body header nav ul a:hover {
+  color: black;
+}
+
 body .landing {
   width: 100%;
   height: 100vh;
